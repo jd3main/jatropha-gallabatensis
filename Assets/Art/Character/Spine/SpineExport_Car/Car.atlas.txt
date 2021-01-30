@@ -1,0 +1,13 @@
+
+Car.png
+size: 195,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Car
+  rotate: false
+  xy: 2, 2
+  size: 191, 252
+  orig: 191, 252
+  offset: 0, 0
+  index: -1
