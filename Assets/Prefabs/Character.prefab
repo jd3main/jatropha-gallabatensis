@@ -143,7 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b62c39aeb1642d448cc66a4e1d5a92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 3
   votes: 0
   State: 0
   rb: {fileID: 137064522932148959}
+  dashDuration: 0.5
+  dashSpeedMultiplier: 1
+  dashMaxMultiplier: 3
+  dashMinMultiplier: 0
