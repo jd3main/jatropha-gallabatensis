@@ -1,0 +1,69 @@
+
+squirrel.png
+size: 472,83
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+右手
+  rotate: false
+  xy: 398, 28
+  size: 30, 53
+  orig: 30, 53
+  offset: 0, 0
+  index: -1
+右腳
+  rotate: false
+  xy: 430, 37
+  size: 35, 44
+  orig: 35, 47
+  offset: 0, 0
+  index: -1
+尾
+  rotate: true
+  xy: 2, 2
+  size: 79, 116
+  orig: 79, 116
+  offset: 0, 0
+  index: -1
+左腳
+  rotate: true
+  xy: 430, 3
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+槍
+  rotate: false
+  xy: 196, 5
+  size: 66, 76
+  orig: 69, 80
+  offset: 1, 1
+  index: -1
+眼睛
+  rotate: false
+  xy: 398, 3
+  size: 29, 23
+  orig: 29, 23
+  offset: 0, 0
+  index: -1
+身體
+  rotate: false
+  xy: 120, 2
+  size: 74, 79
+  orig: 74, 79
+  offset: 0, 0
+  index: -1
+頭
+  rotate: true
+  xy: 334, 14
+  size: 67, 62
+  orig: 67, 62
+  offset: 0, 0
+  index: -1
+頭巾
+  rotate: true
+  xy: 264, 10
+  size: 71, 68
+  orig: 71, 68
+  offset: 0, 0
+  index: -1
