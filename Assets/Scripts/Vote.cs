@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Vote : MonoBehaviour
 {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+    }
+    /*
     [SerializeField] private int numVotes = 1;
     public int NumVotes
     {
@@ -22,5 +27,5 @@ public class Vote : MonoBehaviour
     virtual public void PutVotes(int n)
     {
         numVotes += n;
-    }
+    }*/
 }
