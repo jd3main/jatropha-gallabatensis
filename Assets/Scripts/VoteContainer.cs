@@ -12,7 +12,7 @@ public class VoteContainer : MonoBehaviour
     public int Votes
     {
         get { return votes; }
-        private set { votes = value; }
+        protected set { votes = value; }
     }
 
     public virtual void Place(CharacterController character)
@@ -25,9 +25,9 @@ public class VoteContainer : MonoBehaviour
 
     public virtual void Take(CharacterController character)
     {
-        int n = Mathf.Min(character.votes, capacity - Votes);
-        Votes += n;
-        character.votes -= n;
+        int n = Votes;
+        Votes -= n;
+        character.votes += n;
         return;
     }
 }
