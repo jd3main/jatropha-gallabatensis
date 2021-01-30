@@ -35,22 +35,22 @@ public class PlaceVotes : MonoBehaviour
             {
                 if (team.TeamType == TeamType.Protector)
                 {
-                    target.Place(character);
+                    target.Take(character);
                 }
                 else if (team.TeamType == TeamType.Thief)
                 {
-                    target.Take(character);
+                    target.Place(character);
                 }
             }
             else
             {
                 if (team.TeamType == TeamType.Protector)
                 {
-                    target.Take(character);
+                    target.Place(character);
                 }
                 else if (team.TeamType == TeamType.Thief)
                 {
-                    target.Place(character);
+                    target.Take(character);
                 }
             }
         }
