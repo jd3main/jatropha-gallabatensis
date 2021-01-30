@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{149a5c26-6be4-486e-a133-3da1ba69d5d4}">
+		<property name="assetPath">
+			<value>2021_GGJ_Music_Urgent.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>38.223333333333336</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4ca392fb-caf4-4bde-9fa0-4124986225b1}</destination>
+		</relationship>
+	</object>
+</objects>

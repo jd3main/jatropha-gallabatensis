@@ -1,0 +1,382 @@
+[LOG] System::create                           : Header version = 2.01.07. Current version = 2.01.07.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
+[LOG] SystemI::init                            : Initialize version=20107 (113487), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=192000, nAvgBytesPerSec=1536000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 16384 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] SystemI::init                            : Output requires a sample rate of 192000Hz, resampling will occur.
+[LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0000021A87D54C98 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000265FA2F2A8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9673C7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9673C7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9673C7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9673C7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000021A260176B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='2021_GGJ_Music_transition', format=5, channels=2, frequency=48000, lengthbytes=66560, lengthpcm=261856, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.202391.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000265FA2F2A8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9673C7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9673C7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9673C7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9673C7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000021A260176B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='2021_GGJ_Music_Lose', format=5, channels=2, frequency=48000, lengthbytes=56832, lengthpcm=261856, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.161389.
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88015A48 : node = 0000021A50C915A0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88015A48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A50C916B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88015A48
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88015A48)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A89F7CD38)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88018628)
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88016108 : node = 0000021A880F0860
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88016108
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A880F0970
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88016108
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88017C08
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88017C08
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88018628 : node = 0000021A8806E320
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88018628
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A8806E430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 13450
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88018628
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88016108)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A26207D98)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88017C08)
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A880176F8 : node = 0000021A50C915A0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88017038 : node = 0000021A50C916E0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A880176F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A50C916B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer2', format=5, channels=2, frequency=48000, lengthbytes=861120, lengthpcm=3276512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.035833.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A880176F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88017038
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A50C917F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer3', format=5, channels=2, frequency=48000, lengthbytes=711776, lengthpcm=2686688, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.043558.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88017038
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88016618 : node = 0000021A50C91460
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88016618
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A50C91570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Win', format=5, channels=2, frequency=48000, lengthbytes=200416, lengthpcm=851680, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.228588.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88016618
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer2 (0000021A880176F8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer2 (0000021A89F7EC18)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer2 (0000021A88018988)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer3 (0000021A88017038)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer3 (0000021A89F7EDB8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer3 (0000021A88017548)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88018628)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A89F7C858)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88017A58)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Win (0000021A88016618)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Win (0000021A26208418)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Win (0000021A88017C08)
+[LOG] SoundI::release                          :  (0000021A54B3BAB8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_transition (0000021A262095F8)
+[LOG] SoundI::release                          :  (0000021A54B3C358)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lose (0000021A26208758)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000265FA2F2A8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9673C7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9673C7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9673C7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9673C7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000021A9EEBEBB8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='2021_GGJ_Music_transition', format=5, channels=2, frequency=48000, lengthbytes=66560, lengthpcm=261856, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.202391.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000265FA2F2A8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9673C7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9673C7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9673C7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9673C7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000021A9EEBEBB8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='2021_GGJ_Music_Lose', format=5, channels=2, frequency=48000, lengthbytes=56832, lengthpcm=261856, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.161389.
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88017A58 : node = 0000021A8806E460
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88017A58
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A8806E570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88017A58
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A880176F8 : node = 0000021A54AB89C0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A880176F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A54AB8AD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A880176F8
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88017A58)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A26207238)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A880187D8)
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88017548 : node = 0000021A54AB9000
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88017548
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A54AB9110
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88017548
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A880176F8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A50D9E088)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88017038)
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A880187D8 : node = 0000021A50C91AA0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A880187D8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 0000021A88016B28 : node = 0000021A50C911E0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A50C91BB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer2', format=5, channels=2, frequency=48000, lengthbytes=861120, lengthpcm=3276512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.035833.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A880187D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88016B28
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A50C912F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer3', format=5, channels=2, frequency=48000, lengthbytes=711776, lengthpcm=2686688, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.043558.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88016B28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88017038
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88017038
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A88016618 : node = 0000021A5066C4A0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88016618
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A5066C5B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer1', format=5, channels=2, frequency=48000, lengthbytes=973504, lengthpcm=3997408, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.413884.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88016618
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer3 (0000021A88016B28)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer3 (0000021A262092B8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer3 (0000021A88016468)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer2 (0000021A880187D8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer2 (0000021A26206A18)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer2 (0000021A88017038)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88017548)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A89F7C1D8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88018988)
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000021A880167C8 : node = 0000021A5066C720
+[LOG] SystemI::createSound                     : add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A880167C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 0000021A88015A48 : node = 0000021A5066C5E0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000021A85ACC148.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A5066C830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer2', format=5, channels=2, frequency=48000, lengthbytes=861120, lengthpcm=3276512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.035833.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A880167C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A88015A48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/2021-GGJ-Music-fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3385824
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A5066C6F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2021_GGJ_Music_Lvl1S1_Layer3', format=5, channels=2, frequency=48000, lengthbytes=711776, lengthpcm=2686688, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.043558.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A88015A48
+[LOG] SoundI::release                          :  (0000021A9F6C33D8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_transition (0000021A50D9DBA8)
+[LOG] SoundI::release                          :  (0000021A9F6C3548)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lose (0000021A50D9DD48)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer3 (0000021A88015A48)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer3 (0000021A84820DF8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer3 (0000021A88017C08)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer2 (0000021A880167C8)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer2 (00000219C5D0DB78)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer2 (0000021A88018628)
+[LOG] SoundI::release                          : 2021_GGJ_Music_Lvl1S1_Layer1 (0000021A88016618)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A89F7EC18)
+[LOG] SoundI::release                          :     2021_GGJ_Music_Lvl1S1_Layer1 (0000021A880156E8)
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
