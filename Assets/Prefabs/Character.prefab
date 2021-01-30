@@ -420,9 +420,13 @@ MonoBehaviour:
   Speed: 3
   votes: 0
   State: 0
+  DashDuration: 0.5
+  DashSpeedMultiplier: 1
+  DashMaxMultiplier: 3
+  DashMinMultiplier: 0
+  MaxVoteLost: 4
+  VoteEmittedForce: 1
   rb: {fileID: 137064522932148959}
-  dashDuration: 0.5
-  dashSpeedMultiplier: 1
-  dashMaxMultiplier: 3
-  dashMinMultiplier: 0
   voteCountsText: {fileID: 937638844}
+  votePrefab: {fileID: 9138732505636674120, guid: 2881dad2722a3d84db1873f05b56107e,
+    type: 3}

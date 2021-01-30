@@ -9,20 +9,24 @@ public class CharacterController : MonoBehaviour
     public int votes = 0;
     public PlayerState State = PlayerState.moving;
     public enum PlayerState { moving, dashing };
+    public float DashDuration = 3.0f;
+    public float DashSpeedMultiplier = 1.0f;
+    public float DashMaxMultiplier = 3.0f;
+    public float DashMinMultiplier = 0.0f;
+
+    public int MaxVoteLost = 4;
+    public float VoteEmittedForce = 0.1f;
 
     protected Vector2 movement;
     [SerializeField]
     protected Rigidbody2D rb;
     [SerializeField]
-    protected float dashDuration = 3.0f;
-    [SerializeField]
-    protected float dashSpeedMultiplier = 1.0f;
-    [SerializeField]
-    protected float dashMaxMultiplier = 3.0f;
-    [SerializeField]
-    protected float dashMinMultiplier = 1.0f;
-    [SerializeField]
     protected Text voteCountsText;
+    [SerializeField]
+    protected GameObject votePrefab;
+    protected float lastMovementX = 1.0f;
+    [SerializeField]
+    protected Animator animator;
 
     protected virtual void Update()
     {
@@ -31,18 +35,25 @@ public class CharacterController : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine(dash());
 
-
-        //transform.localScale = new Vector3(transform.localScale.x * movement.x == 0 ? 1: movement.x, transform.localScale.y, transform.localScale.z);
+        if (lastMovementX != movement.x && movement.x != 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1.0f, transform.localScale.y, transform.localScale.z);
+            lastMovementX = movement.x;
+        }
+        
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * Speed * dashSpeedMultiplier * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * Speed * DashSpeedMultiplier * Time.fixedDeltaTime);
+        if (movement.x != 0) animator.SetBool("Move", true);
+        else { animator.SetBool("Move", false); }
+        voteCountsText.text = votes.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        
         if (collision.gameObject.tag == "PUIPUI")
         {
             votes = 0;
@@ -50,7 +61,7 @@ public class CharacterController : MonoBehaviour
         // getComponent here is not a good way.
         if (collision.gameObject.tag == "player" && collision.gameObject.GetComponent<CharacterController>().State == PlayerState.dashing)
         {
-            votesStolen();
+            // votesStolen();
         }
         if (collision.gameObject.tag == "player" && State == PlayerState.dashing)
         {
@@ -61,11 +72,24 @@ public class CharacterController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "vote") votes += 1;
-        voteCountsText.text = votes.ToString();
+        animator.SetTrigger("PickUp");
     }
 
     void votesStolen()
     {
+        if (votes == 0) return;
+        int _lostVotes = 1 + (int)Random.value * MaxVoteLost;
+
+        if (votes < _lostVotes) _lostVotes = votes;
+        votes -= _lostVotes;
+        for(int i=0; i< _lostVotes; i++)
+        {
+            GameObject ins = Instantiate(votePrefab, transform, true);
+            ins.transform.SetParent(null);
+            Vector2 v = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
+            Debug.Log(v);
+            ins.GetComponent<Rigidbody2D>().AddForce(v);
+        }
 
     }
     
@@ -74,15 +98,17 @@ public class CharacterController : MonoBehaviour
     {
         float timeElapsed = 0;
         State = PlayerState.dashing;
+        animator.SetBool("Rush", true);
 
-        while (timeElapsed < dashDuration)
+        while (timeElapsed < DashDuration)
         {
-            dashSpeedMultiplier = Mathf.Lerp(dashMaxMultiplier, dashMinMultiplier, timeElapsed / dashDuration);
+            DashSpeedMultiplier = Mathf.Lerp(DashMaxMultiplier, DashMinMultiplier, timeElapsed / DashDuration);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
 
-        dashSpeedMultiplier = 1.0f;
+        DashSpeedMultiplier = 1.0f;
         State = PlayerState.moving;
+        animator.SetBool("Rush", false);
     }
 }
