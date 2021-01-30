@@ -28,7 +28,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField]
     protected Animator animator;
 
-    protected virtual void Update()
+    protected void Update()
     {
         // hard coded temporarily.
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -40,10 +40,10 @@ public class CharacterController : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x * -1.0f, transform.localScale.y, transform.localScale.z);
             lastMovementX = movement.x;
         }
-        
+
     }
 
-    void FixedUpdate()
+    protected void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * Speed * DashSpeedMultiplier * Time.fixedDeltaTime);
         if (movement.x != 0 || movement.y != 0) animator.SetBool("Move", true);
@@ -51,7 +51,7 @@ public class CharacterController : MonoBehaviour
         voteCountsText.text = votes.ToString();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         //votesStolen();
         if (collision.gameObject.tag == "PUIPUI")
@@ -69,7 +69,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "vote" && collision.GetComponent<Vote>().pickable)
         {
@@ -78,29 +78,29 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    void votesStolen()
+    protected void votesStolen()
     {
         if (votes == 0) return;
         int lostVotes = 1 + (int)Random.Range(0.0f, 1.0f * MaxVoteLost);
 
         if (votes < lostVotes) lostVotes = votes;
         votes -= lostVotes;
-        for(int i=0; i< lostVotes; i++)
+        for (int i = 0; i < lostVotes; i++)
         {
             GameObject ins = Instantiate(votePrefab, transform, false);
             ins.transform.SetParent(null, true);
-            ins.GetComponent<Vote>().Fling(Random.insideUnitCircle*3);
+            ins.GetComponent<Vote>().Fling(Random.insideUnitCircle * 3);
             /*
             ins.GetComponent<Vote>().SetUnpickable();
-            Vector2 v = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f))* VoteEmittedForce;
+            Vector2 v = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f)) * VoteEmittedForce;
             Debug.Log(v);
             ins.GetComponent<Rigidbody2D>().AddForce(v);
             */
         }
     }
-    
 
-    IEnumerator dash()
+
+    protected IEnumerator dash()
     {
         float timeElapsed = 0;
         State = PlayerState.dashing;
