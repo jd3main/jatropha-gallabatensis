@@ -1,0 +1,62 @@
+
+Shark.png
+size: 279,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 2, 10
+  size: 66, 169
+  orig: 66, 169
+  offset: 0, 0
+  index: -1
+下巴
+  rotate: false
+  xy: 173, 33
+  size: 45, 43
+  orig: 45, 43
+  offset: 0, 0
+  index: -1
+右鰭
+  rotate: true
+  xy: 173, 2
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+左鰭
+  rotate: false
+  xy: 220, 13
+  size: 33, 34
+  orig: 33, 34
+  offset: 0, 0
+  index: -1
+帽子
+  rotate: false
+  xy: 220, 49
+  size: 56, 27
+  orig: 58, 28
+  offset: 1, 0
+  index: -1
+帽子後
+  rotate: false
+  xy: 220, 2
+  size: 28, 9
+  orig: 28, 9
+  offset: 0, 0
+  index: -1
+背鰭下
+  rotate: false
+  xy: 255, 7
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+背鰭中
+  rotate: true
+  xy: 255, 23
+  size: 24, 22
+  orig: 24, 22
+  offset: 0, 0
+  index: -1
