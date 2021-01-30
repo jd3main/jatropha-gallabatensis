@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{62b3e1f8-3127-4dc6-8266-95b9c8e50e1b}">
+		<property name="assetPath">
+			<value>FS-boot_single_soft_gentle_on_concrete_002_60284.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.38437500000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{36bced1e-a4fb-432e-b2c3-00acb52b025c}</destination>
+		</relationship>
+	</object>
+</objects>
