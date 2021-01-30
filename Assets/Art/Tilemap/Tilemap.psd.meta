@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: -9127936476011297880
     second: Tilemap_5
+  - first:
+      213: 3775355368486569077
+    second: Tilemap_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,8 +111,8 @@ TextureImporter:
       name: Tilemap_0
       rect:
         serializedVersion: 2
-        x: 192
-        y: 320
+        x: 0
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -129,8 +132,8 @@ TextureImporter:
       name: Tilemap_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 320
+        x: 64
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -150,8 +153,8 @@ TextureImporter:
       name: Tilemap_2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
+        x: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -171,8 +174,8 @@ TextureImporter:
       name: Tilemap_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 0
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -192,8 +195,8 @@ TextureImporter:
       name: Tilemap_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 0
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -213,8 +216,8 @@ TextureImporter:
       name: Tilemap_5
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 0
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -226,6 +229,27 @@ TextureImporter:
       bones: []
       spriteID: 8a3040f032e035180800000000000000
       internalID: -9127936476011297880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574818774b1c46430800000000000000
+      internalID: 3775355368486569077
       vertices: []
       indices: 
       edges: []
