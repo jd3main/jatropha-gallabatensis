@@ -8,6 +8,13 @@ public class Shredder : VoteContainer
     public float beginTime = -1;
     public int donePieces = 0;
 
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponentInParent<Animator>();
+    }
+
     void Update()
     {
         if (beginTime == -1 && Votes > 0)
@@ -18,6 +25,7 @@ public class Shredder : VoteContainer
 
         if (beginTime != -1)
         {
+            animator.SetBool("ON", true);
             while (Votes != 0 && donePieces < (Time.time - beginTime) * decreasePerSec)
             {
                 donePieces++;
@@ -26,6 +34,7 @@ public class Shredder : VoteContainer
             if (Votes == 0)
             {
                 ClearState();
+                animator.SetBool("ON", false);
             }
         }
     }
