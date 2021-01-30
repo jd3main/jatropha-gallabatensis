@@ -46,24 +46,24 @@ public class CharacterController : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * Speed * DashSpeedMultiplier * Time.fixedDeltaTime);
-        if (movement.x != 0) animator.SetBool("Move", true);
+        if (movement.x != 0 || movement.y != 0) animator.SetBool("Move", true);
         else { animator.SetBool("Move", false); }
         voteCountsText.text = votes.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        //votesStolen();
         if (collision.gameObject.tag == "PUIPUI")
         {
             votes = 0;
         }
         // getComponent here is not a good way.
-        if (collision.gameObject.tag == "player" && collision.gameObject.GetComponent<CharacterController>().State == PlayerState.dashing)
+        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<CharacterController>().State == PlayerState.dashing)
         {
-            // votesStolen();
+            votesStolen();
         }
-        if (collision.gameObject.tag == "player" && State == PlayerState.dashing)
+        if (collision.gameObject.tag == "Player" && State == PlayerState.dashing)
         {
             // steal others' votes
         }
@@ -71,26 +71,32 @@ public class CharacterController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "vote") votes += 1;
-        animator.SetTrigger("PickUp");
+        if (collision.gameObject.tag == "vote" && collision.GetComponent<Vote>().pickable)
+        {
+            votes += 1;
+            animator.SetTrigger("PickUp");
+        }
     }
 
     void votesStolen()
     {
         if (votes == 0) return;
-        int _lostVotes = 1 + (int)Random.value * MaxVoteLost;
+        int lostVotes = 1 + (int)Random.Range(0.0f, 1.0f * MaxVoteLost);
 
-        if (votes < _lostVotes) _lostVotes = votes;
-        votes -= _lostVotes;
-        for(int i=0; i< _lostVotes; i++)
+        if (votes < lostVotes) lostVotes = votes;
+        votes -= lostVotes;
+        for(int i=0; i< lostVotes; i++)
         {
-            GameObject ins = Instantiate(votePrefab, transform, true);
-            ins.transform.SetParent(null);
-            Vector2 v = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
+            GameObject ins = Instantiate(votePrefab, transform, false);
+            ins.transform.SetParent(null, true);
+            ins.GetComponent<Vote>().Fling(Random.insideUnitCircle*3);
+            /*
+            ins.GetComponent<Vote>().SetUnpickable();
+            Vector2 v = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f))* VoteEmittedForce;
             Debug.Log(v);
             ins.GetComponent<Rigidbody2D>().AddForce(v);
+            */
         }
-
     }
     
 
