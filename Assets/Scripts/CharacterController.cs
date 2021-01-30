@@ -13,12 +13,12 @@ public class CharacterController : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
-    void Update()
+    protected virtual void Update()
     {
         // hard coded temporarily.
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        
+
 
         //transform.localScale = new Vector3(transform.localScale.x * movement.x == 0 ? 1: movement.x, transform.localScale.y, transform.localScale.z);
     }
@@ -30,7 +30,7 @@ public class CharacterController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (collision.gameObject.tag == "PUIPUI")
         {
             votes = 0;
