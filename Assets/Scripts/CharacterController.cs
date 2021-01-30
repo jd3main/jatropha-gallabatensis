@@ -59,11 +59,11 @@ public class CharacterController : MonoBehaviour
             votes = 0;
         }
         // getComponent here is not a good way.
-        if (collision.gameObject.tag == "player" && collision.gameObject.GetComponent<CharacterController>().State == PlayerState.dashing)
+        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<CharacterController>().State == PlayerState.dashing)
         {
             votesStolen();
         }
-        if (collision.gameObject.tag == "player" && State == PlayerState.dashing)
+        if (collision.gameObject.tag == "Player" && State == PlayerState.dashing)
         {
             // steal others' votes
         }
