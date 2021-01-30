@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public enum VoteCountingMethod
 {
     Debug,
+    SumIncludingPerson,
 }
 
 public class VotesUI : MonoBehaviour
@@ -25,12 +26,13 @@ public class VotesUI : MonoBehaviour
     public VoteCountingMethod countingMethodA;
     public VoteCountingMethod countingMethodB;
 
-    [SerializeField] protected int debugVoteCountA = 10;
-    [SerializeField] protected int debugVoteCountB = 20;
+    [SerializeField] protected int[] debugVoteCounts = new int[] { 10, 20 };
 
     [SerializeField] protected Text votesAText;
     [SerializeField] protected Text votesBText;
 
+    [SerializeField] GameObject player;
+ 
     void Start()
     {
         game = Game.Instance;
@@ -93,11 +95,10 @@ public class VotesUI : MonoBehaviour
         // TODO
         switch (method)
         {
+            case VoteCountingMethod.SumIncludingPerson:
+                return player.GetComponent<CharacterController>().votes;
             case VoteCountingMethod.Debug:
-                if (team == 0)
-                    return debugVoteCountA;
-                else
-                    return debugVoteCountB;
+                return debugVoteCounts[team];
             default:
                 return 0;
         }
