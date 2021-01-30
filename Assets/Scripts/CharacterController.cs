@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -14,14 +15,21 @@ public class CharacterController : MonoBehaviour
     protected Rigidbody2D rb;
     [SerializeField]
     protected float dashDuration = 3.0f;
-    protected float dashSpeedMultiplier;
-
+    [SerializeField]
+    protected float dashSpeedMultiplier = 1.0f;
+    [SerializeField]
+    protected float dashMaxMultiplier = 3.0f;
+    [SerializeField]
+    protected float dashMinMultiplier = 1.0f;
+    [SerializeField]
+    protected Text voteCountsText;
 
     protected virtual void Update()
     {
         // hard coded temporarily.
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine(dash());
 
 
         //transform.localScale = new Vector3(transform.localScale.x * movement.x == 0 ? 1: movement.x, transform.localScale.y, transform.localScale.z);
@@ -29,7 +37,7 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * Speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * Speed * dashSpeedMultiplier * Time.fixedDeltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,15 +61,28 @@ public class CharacterController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "vote") votes += 1;
+        voteCountsText.text = votes.ToString();
     }
 
     void votesStolen()
     {
 
     }
+    
 
-    void dash()
+    IEnumerator dash()
     {
+        float timeElapsed = 0;
+        State = PlayerState.dashing;
 
+        while (timeElapsed < dashDuration)
+        {
+            dashSpeedMultiplier = Mathf.Lerp(dashMaxMultiplier, dashMinMultiplier, timeElapsed / dashDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        dashSpeedMultiplier = 1.0f;
+        State = PlayerState.moving;
     }
 }
