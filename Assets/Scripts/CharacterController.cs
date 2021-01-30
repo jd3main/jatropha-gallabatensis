@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class CharacterController : MonoBehaviour
     protected float dashMaxMultiplier = 3.0f;
     [SerializeField]
     protected float dashMinMultiplier = 1.0f;
+    [SerializeField]
+    protected Text voteCountsText;
 
     protected virtual void Update()
     {
@@ -58,6 +61,7 @@ public class CharacterController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "vote") votes += 1;
+        voteCountsText.text = votes.ToString();
     }
 
     void votesStolen()
