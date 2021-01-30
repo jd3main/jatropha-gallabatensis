@@ -18,7 +18,7 @@ public class CharacterController : MonoBehaviour
         // hard coded temporarily.
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        Debug.Log(movement);
+        
 
         //transform.localScale = new Vector3(transform.localScale.x * movement.x == 0 ? 1: movement.x, transform.localScale.y, transform.localScale.z);
     }
@@ -30,7 +30,7 @@ public class CharacterController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "vote") votes += 1;
+        
         if (collision.gameObject.tag == "PUIPUI")
         {
             votes = 0;
@@ -44,6 +44,11 @@ public class CharacterController : MonoBehaviour
         {
             // steal others' votes
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "vote") votes += 1;
     }
 
     void votesStolen()
