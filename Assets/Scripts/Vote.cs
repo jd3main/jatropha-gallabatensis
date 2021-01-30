@@ -43,7 +43,6 @@ public class Vote : MonoBehaviour
             float x = direction.x * r;
             float y = direction.y * r + h;
             Vector3 targetPosition = initialPos + new Vector3(x, y, 0);
-            print(LayerMask.NameToLayer("Wall"));
             transform.position = targetPosition;
             transform.rotation = Quaternion.Euler(0, 0, rotOffset + r / dr * rotateSpeed);
             yield return new WaitForFixedUpdate();
