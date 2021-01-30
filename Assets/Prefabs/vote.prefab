@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9138732505636674124}
   m_Layer: 0
   m_Name: vote
-  m_TagString: Untagged
+  m_TagString: vote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124f0a89afbd2e4eb71cfb18b090b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numVotes: 1
 --- !u!61 &9138732505636674124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106,7 +105,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
