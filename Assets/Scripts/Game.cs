@@ -6,23 +6,39 @@ using UnityEngine.Events;
 
 public class Game : MonoBehaviour
 {
-    public UnityEvent globalStartEvent = new UnityEvent();
-    public float globalTimer { get; private set; }
+    public static Game Instance { get; private set; }
+
+    public float startDeley = 1f;
+    public UnityEvent gameStartEvent = new UnityEvent();
+
+    public float gameTimeLimit = 120;
+    private float gameStartTime;
+    public float gameTime => Time.time - gameStartTime;
+    public float gameCountDown => gameTimeLimit - gameTime;
 
     void Awake()
     {
-        globalTimer = 0.0f;
+        gameStartTime = 0;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Has multiple Game in scene");
+            Destroy(this);
+        }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        globalStartEvent.Invoke();
+        StartCoroutine(GameCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator GameCoroutine()
     {
-        globalTimer += Time.deltaTime;
+        yield return new WaitForSeconds(startDeley);
+        gameStartTime = Time.time;
+        gameStartEvent.Invoke();
     }
 }
