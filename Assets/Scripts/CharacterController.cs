@@ -9,9 +9,13 @@ public class CharacterController : MonoBehaviour
     public PlayerState State = PlayerState.moving;
     public enum PlayerState { moving, dashing };
 
-    private Vector2 movement;
+    protected Vector2 movement;
     [SerializeField]
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+    [SerializeField]
+    protected float dashDuration = 3.0f;
+    protected float dashSpeedMultiplier;
+
 
     protected virtual void Update()
     {
