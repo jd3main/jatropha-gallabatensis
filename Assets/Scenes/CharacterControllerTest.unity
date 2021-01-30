@@ -244,11 +244,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -333.30414
+      value: -62.19998
       objectReference: {fileID: 0}
     - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80.56012
+      value: 22.790298
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218527170, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137064522932148952, guid: 7223c2657cef7664d85fb700aa928f5f,
         type: 3}
@@ -13171,7 +13175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1218527171
 AudioListener:
   m_ObjectHideFlags: 0
@@ -13318,7 +13322,7 @@ GameObject:
   - component: {fileID: 1721696434}
   - component: {fileID: 1721696433}
   - component: {fileID: 1721696432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20351,11 +20355,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -193.05414
+      value: 12.456268
       objectReference: {fileID: 0}
     - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80.56012
+      value: 22.790298
       objectReference: {fileID: 0}
     - target: {fileID: 137064522932148953, guid: 7223c2657cef7664d85fb700aa928f5f,
         type: 3}
