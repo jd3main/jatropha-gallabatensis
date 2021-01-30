@@ -4,28 +4,38 @@ using UnityEngine;
 
 public class Vote : MonoBehaviour
 {
+    public bool pickable = true;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if(pickable) Destroy(gameObject);
     }
-    /*
-    [SerializeField] private int numVotes = 1;
-    public int NumVotes
+
+    public void SetUnpickable()
     {
-        get { return numVotes; }
-        set
+        StartCoroutine(UnPickable());
+        StartCoroutine(Blinking());
+    }
+
+    
+    IEnumerator UnPickable()
+    {
+        pickable = false;
+        yield return new WaitForSeconds(3);
+        pickable = true;
+    }
+
+    IEnumerator Blinking()
+    {
+        SpriteRenderer SR = GetComponent<SpriteRenderer>();
+        for(int i=0; i<6; i++)
         {
-            numVotes = value;
+            SR.enabled = false;
+            yield return new WaitForSeconds(0.25f);
+            SR.enabled = true;
+            yield return new WaitForSeconds(0.25f);
         }
+        GetComponents<Collider2D>()[1].enabled = false;
+        
     }
-
-    virtual public int TakeVotes()
-    {
-        return numVotes;
-    }
-
-    virtual public void PutVotes(int n)
-    {
-        numVotes += n;
-    }*/
 }
