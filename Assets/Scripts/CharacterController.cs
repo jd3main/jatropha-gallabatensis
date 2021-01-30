@@ -81,20 +81,22 @@ public class CharacterController : MonoBehaviour
     void votesStolen()
     {
         if (votes == 0) return;
-        int _lostVotes = 1 + (int)Random.Range(0.0f, 1.0f * MaxVoteLost);
+        int lostVotes = 1 + (int)Random.Range(0.0f, 1.0f * MaxVoteLost);
 
-        if (votes < _lostVotes) _lostVotes = votes;
-        votes -= _lostVotes;
-        for(int i=0; i< _lostVotes; i++)
+        if (votes < lostVotes) lostVotes = votes;
+        votes -= lostVotes;
+        for(int i=0; i< lostVotes; i++)
         {
             GameObject ins = Instantiate(votePrefab, transform, false);
             ins.transform.SetParent(null, true);
+            ins.GetComponent<Vote>().Fling(Random.insideUnitCircle*3);
+            /*
             ins.GetComponent<Vote>().SetUnpickable();
             Vector2 v = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f))* VoteEmittedForce;
             Debug.Log(v);
             ins.GetComponent<Rigidbody2D>().AddForce(v);
+            */
         }
-
     }
     
 
