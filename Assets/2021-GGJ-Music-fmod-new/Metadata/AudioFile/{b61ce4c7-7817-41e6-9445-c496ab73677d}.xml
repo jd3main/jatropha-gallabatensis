@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b61ce4c7-7817-41e6-9445-c496ab73677d}">
+		<property name="assetPath">
+			<value>2021_GGJ_Music_Lvl1S1_Layer1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>83.279333333333327</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{36bced1e-a4fb-432e-b2c3-00acb52b025c}</destination>
+		</relationship>
+	</object>
+</objects>
