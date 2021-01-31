@@ -3,7 +3,13 @@ guid: f50487a60d784ae4f89c310b5a93085a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - voteCountsText: {instanceID: 0}
+  - votePrefab: {fileID: 9138732505636674120, guid: 2881dad2722a3d84db1873f05b56107e,
+      type: 3}
+  - animator: {instanceID: 0}
+  - walls: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
