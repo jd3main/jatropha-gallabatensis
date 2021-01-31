@@ -30,19 +30,42 @@ public class VotesUI : MonoBehaviour
 
     [SerializeField] protected Text votesAText;
     [SerializeField] protected Text votesBText;
+    /// <summary>
+    /// deprecated
+    /// </summary>
+    protected GameObject player;
 
-    [SerializeField] GameObject player;
- 
+    public GameObject team_squirrel;
+    public GameObject team_shark;
+    CharacterController[] squirrels;
+    CharacterController[] sharks;
+
     void Start()
     {
         game = Game.Instance;
         CreateVoteBar();
+        squirrels = team_squirrel.GetComponentsInChildren<CharacterController>();
+        sharks = team_shark.GetComponentsInChildren<CharacterController>();
+        Debug.Log("squirrels amount: " + squirrels.Length);
+        Debug.Log("sharks amount: " + squirrels.Length);
     }
 
     void Update()
     {
-        int votesA = CountVotes(0, countingMethodA);
-        int votesB = CountVotes(1, countingMethodB);
+        int votesA = 0;
+        int votesB = 0;
+        
+        // somehow a bad way. Should use event to update vote counts when picking up votes.
+        for(int i=0; i< squirrels.Length; i++)
+        {
+            votesA += squirrels[i].votes;
+        }
+
+        for (int i = 0; i < sharks.Length; i++)
+        {
+            votesB += sharks[i].votes;
+        }
+
         UpdateVotesBar(votesA, votesB);
         UpdateVotesNumerUI(votesA, votesB);
     }
@@ -73,6 +96,7 @@ public class VotesUI : MonoBehaviour
 
     protected void UpdateVotesBar(int votesA, int votesB)
     {
+        if (votesA + votesB == 0) return;
         float ratio = votesA / (float)(votesA+votesB);
 
         for (int y = 0; y < electorBarSize.y; y++)
