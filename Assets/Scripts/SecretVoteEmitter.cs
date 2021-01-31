@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class SecretVoteEmitter : MonoBehaviour
 {
     public GameObject VotePrefab;
     public int amounts = 30;
+    [SerializeField] Light2D light2d;
 
     void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            StartCoroutine(OhYeahLight());
             for (int i = 0; i < amounts; i++)
             {
                 GameObject ins = Instantiate(VotePrefab, transform, false);
@@ -18,7 +21,21 @@ public class SecretVoteEmitter : MonoBehaviour
                 ins.GetComponent<Vote>().Fling(Random.insideUnitCircle * 3);
             }
         }
-        Debug.Log("There's something weird here....hmm.....");
+    }
+
+    IEnumerator OhYeahLight()
+    {
+        light2d.intensity = 0.8f;
+        float timeElapsed = 0;
+
+        while (timeElapsed < 2)
+        {
+            light2d.intensity = Mathf.Lerp(0.8f, 0.0f, timeElapsed / 2);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        light2d.intensity = 0.0f;
     }
 
 }
