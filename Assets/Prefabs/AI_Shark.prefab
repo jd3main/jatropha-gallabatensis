@@ -515,7 +515,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.16
 --- !u!114 &-935073639843884620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +544,9 @@ MonoBehaviour:
   animator: {fileID: 2354850605526963887, guid: f7800ce31a9d9c34db7a8c2b6853a497,
     type: 3}
   walls: {fileID: 7579342224382008305, guid: 8a60cd971c32ee5d9855d5522239726e, type: 3}
+  currGridVec: {x: 0, y: 0}
+  nextGridVec: {x: 0, y: 0}
+  destGridVec: {x: 0, y: 0}
 --- !u!114 &3911017334699462130
 MonoBehaviour:
   m_ObjectHideFlags: 0

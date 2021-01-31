@@ -61,6 +61,7 @@ public class AI : CharacterController
     PathFind.Point currentPos;
     PathFind.Point lastPos;
     List<PathFind.Point> path;
+    bool wander;
 
 
     // For debugging
@@ -81,7 +82,7 @@ public class AI : CharacterController
         nextGridVec = new Vector2Int();
         destGridVec = new Vector2Int();
 
-
+        wander = true;
         tileBounds = walls.cellBounds;
         //  Debug.Log("Bounds: [" + tileBounds.xMin + "," + tileBounds.yMin + "," + tileBounds.zMin + "] - [" + tileBounds.xMax + ", " + tileBounds.yMax + ", " + tileBounds.zMax + "]");
 
@@ -115,15 +116,7 @@ public class AI : CharacterController
 
     new void FixedUpdate()
     {
-        if (CheckPlayer())
-        {
-
-        }
-        else if (CheckVote())
-        {
-
-        }
-        else
+        if (wander)
         {
             Wander();
         }
@@ -167,22 +160,31 @@ public class AI : CharacterController
         //  Debug.Log("Path length = " + path.Count);
     }
 
-    bool CheckPlayer()
+    new void OnCollisionEnter2D(Collision2D collision)
     {
-        return false;
-    }
+        //  Debug
+        Debug.Log("AI Collision");
+        base.OnCollisionEnter2D(collision);
+        GameObject obj = collision.gameObject;
+        if (obj.tag == "Player" &&
+            obj.GetComponent<Team>().TeamNumber() != obj.GetComponent<Team>().TeamNumber())
+        {
+            Vector2 playerPos = obj.GetComponent<Rigidbody2D>().position;
+            //  Vector3Int cellPos = walls.WorldToCell(new Vector3(playerPos.x, playerPos.y - 0.56f, tileBounds.zMin));
+            movement = playerPos - rb.position;
+            //  path.Insert(0, new PathFind.Point(cellPos.x, cellPos.y));
 
-    bool CheckVote()
-    {
-        return false;
+            wander = false;
+            StartCoroutine(dash());
+        }
     }
 
     void Wander()
     {
         Vector3Int cellPos = walls.WorldToCell(new Vector3(rb.position.x, rb.position.y - 0.56f, tileBounds.zMin));
 
-        // Debug
-        Debug.Log("rb.position: " + rb.position.x + " " + (rb.position.y - 0.56f));
+        //  Debug
+        //  Debug.Log("rb.position: " + rb.position.x + " " + (rb.position.y - 0.56f));
 
         if (currentPos == null)
         {
@@ -220,6 +222,13 @@ public class AI : CharacterController
             destGridVec.x = path.Last().x;
             destGridVec.y = path.Last().y;
         }
+    }
+
+    new string dash()
+    {
+        base.dash();
+        wander = true;
+        return "";
     }
 
 }
