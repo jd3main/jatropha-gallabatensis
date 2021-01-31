@@ -43,7 +43,6 @@ public class BgmController : MonoBehaviour
 
         print("Transition = 1");
         emitterRef.Target.SetParameter("Transition", 1);
-        yield return new WaitForSeconds(30);
     }
 
     void EndGame()
