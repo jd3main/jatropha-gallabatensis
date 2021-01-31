@@ -8,6 +8,7 @@ public class SecretVoteEmitter : MonoBehaviour
     public GameObject VotePrefab;
     public int amounts = 30;
     [SerializeField] Light2D light2d;
+    [SerializeField] AudioSource sfx;
 
     void OnTriggerStay2D(Collider2D collision)
     {
@@ -27,6 +28,8 @@ public class SecretVoteEmitter : MonoBehaviour
     {
         light2d.intensity = 0.8f;
         float timeElapsed = 0;
+        sfx.Play();
+        yield return new WaitForSeconds(1);
 
         while (timeElapsed < 2)
         {

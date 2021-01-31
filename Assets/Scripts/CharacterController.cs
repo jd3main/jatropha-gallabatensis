@@ -16,6 +16,8 @@ public class CharacterController : MonoBehaviour
 
     public int MaxVoteLost = 4;
     public float VoteEmittedForce = 0.1f;
+    public AudioSource PickUpPaper;
+    public FootStepPlayer FSP;
 
     protected Vector2 movement;
     [SerializeField]
@@ -46,7 +48,11 @@ public class CharacterController : MonoBehaviour
     protected void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * Speed * DashSpeedMultiplier * Time.fixedDeltaTime);
-        if (movement.x != 0 || movement.y != 0) animator.SetBool("Move", true);
+        if (movement.x != 0 || movement.y != 0)
+        {
+            animator.SetBool("Move", true);
+            FSP.Play();
+        }
         else { animator.SetBool("Move", false); }
         voteCountsText.text = votes.ToString();
     }
@@ -76,6 +82,7 @@ public class CharacterController : MonoBehaviour
         {
             votes += 1;
             animator.SetTrigger("PickUp");
+            if(!PickUpPaper.isPlaying) PickUpPaper.Play();
         }
     }
 
