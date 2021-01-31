@@ -75,8 +75,8 @@ public class AI : CharacterController
     void Start()
     {
         // Debug
-        dest = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        next = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        //dest = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //next = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         currGridVec = new Vector2Int();
         nextGridVec = new Vector2Int();
         destGridVec = new Vector2Int();
@@ -213,8 +213,8 @@ public class AI : CharacterController
             movement = new Vector2(worldPos.x - rb.position.x, worldPos.y - rb.position.y + 0.56f).normalized;
 
             // Debug
-            next.transform.position = worldPos;
-            dest.transform.position = walls.CellToWorld(new Vector3Int(tileBounds.xMin + path.Last().x, tileBounds.yMin + path.Last().y, 0)) + new Vector3(0.32f, 0.32f, 0.0f);
+            //next.transform.position = worldPos;
+            //dest.transform.position = walls.CellToWorld(new Vector3Int(tileBounds.xMin + path.Last().x, tileBounds.yMin + path.Last().y, 0)) + new Vector3(0.32f, 0.32f, 0.0f);
             nextGridVec.x = path.First().x;
             nextGridVec.y = path.First().y;
             destGridVec.x = path.Last().x;
