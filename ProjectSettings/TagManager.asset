@@ -6,6 +6,7 @@ TagManager:
   tags:
   - vote
   - PUIPUI
+  - in-door
   layers:
   - Default
   - TransparentFX
