@@ -515,6 +515,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 121.58353
+      objectReference: {fileID: 0}
+    - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19.490906
+      objectReference: {fileID: 0}
     - target: {fileID: 137064522932148953, guid: 7223c2657cef7664d85fb700aa928f5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -7646,11 +7654,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -413.59875
+      value: 10.301697
       objectReference: {fileID: 0}
     - target: {fileID: 937638842, guid: 7223c2657cef7664d85fb700aa928f5f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 76.56131
+      value: 19.490906
       objectReference: {fileID: 0}
     - target: {fileID: 137064522932148952, guid: 7223c2657cef7664d85fb700aa928f5f,
         type: 3}
@@ -20688,6 +20696,8 @@ GameObject:
   - component: {fileID: 1710170178}
   - component: {fileID: 1710170177}
   - component: {fileID: 1710170180}
+  - component: {fileID: 1710170182}
+  - component: {fileID: 1710170181}
   m_Layer: 0
   m_Name: Global
   m_TagString: Untagged
@@ -20724,7 +20734,11 @@ MonoBehaviour:
   gameStartEvent:
     m_PersistentCalls:
       m_Calls: []
+  gameEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
   gameTimeLimit: 120
+  gameResult: 0
 --- !u!4 &1710170179
 Transform:
   m_ObjectHideFlags: 0
@@ -20764,6 +20778,50 @@ MonoBehaviour:
   votesAText: {fileID: 1872498901}
   votesBText: {fileID: 1641890673}
   player: {fileID: 1087241325}
+--- !u!114 &1710170181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710170176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Main Music
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Win n Lose
+    Value: 0
+  - Name: Intensity
+    Value: 0
+  - Name: Transition
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1710170182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710170176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22c2464c1872b641ba7175251b58d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitterRef:
+    Target: {fileID: 1710170181}
+    Params: []
 --- !u!1001 &1789187404
 PrefabInstance:
   m_ObjectHideFlags: 0
