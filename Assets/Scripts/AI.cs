@@ -61,13 +61,29 @@ public class AI : CharacterController
     PathFind.Point currentPos;
     PathFind.Point lastPos;
     List<PathFind.Point> path;
-    [SerializeField] Vector2 aiming;
+
+
+    // For debugging
+    GameObject dest;
+    GameObject next;
+    [SerializeField] Vector2Int currGridVec;
+    [SerializeField] Vector2Int nextGridVec;
+    [SerializeField] Vector2Int destGridVec;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        // Debug
+        dest = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        next = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        currGridVec = new Vector2Int();
+        nextGridVec = new Vector2Int();
+        destGridVec = new Vector2Int();
+
+
         tileBounds = walls.cellBounds;
-        Debug.Log("Bounds: [" + tileBounds.xMin + "," + tileBounds.yMin + "," + tileBounds.zMin + "] - [" + tileBounds.xMax + ", " + tileBounds.yMax + ", " + tileBounds.zMax + "]");
+        //  Debug.Log("Bounds: [" + tileBounds.xMin + "," + tileBounds.yMin + "," + tileBounds.zMin + "] - [" + tileBounds.xMax + ", " + tileBounds.yMax + ", " + tileBounds.zMax + "]");
 
         map = new float[tileBounds.xMax - tileBounds.xMin, tileBounds.yMax - tileBounds.yMin];
 
@@ -82,7 +98,7 @@ public class AI : CharacterController
                 }
                 else
                 {
-                    Debug.Log((x - tileBounds.xMin) + " " + (y - tileBounds.yMin) + " " + tile.name);
+                    //  Debug.Log((x - tileBounds.xMin) + " " + (y - tileBounds.yMin) + " " + tile.name);
                     map[x - tileBounds.xMin, y - tileBounds.yMin] = 0.0f;
                 }
             }
@@ -148,7 +164,7 @@ public class AI : CharacterController
         }
 
         path = PathFind.Pathfinding.FindPath(pathfind_grid, currentPos, new PathFind.Point(randomX, randomY));
-        Debug.Log("Path length = " + path.Count);
+        //  Debug.Log("Path length = " + path.Count);
     }
 
     bool CheckPlayer()
@@ -163,7 +179,11 @@ public class AI : CharacterController
 
     void Wander()
     {
-        Vector3Int cellPos = walls.WorldToCell(new Vector3(rb.position.x, rb.position.y - 0.24f, tileBounds.zMin));
+        Vector3Int cellPos = walls.WorldToCell(new Vector3(rb.position.x, rb.position.y - 0.56f, tileBounds.zMin));
+
+        // Debug
+        Debug.Log("rb.position: " + rb.position.x + " " + (rb.position.y - 0.56f));
+
         if (currentPos == null)
         {
             currentPos = new PathFind.Point(cellPos.x - tileBounds.xMin, cellPos.y - tileBounds.yMin);
@@ -175,6 +195,9 @@ public class AI : CharacterController
             currentPos = new PathFind.Point(cellPos.x - tileBounds.xMin, cellPos.y - tileBounds.yMin);
         }
 
+        currGridVec.x = currentPos.x;
+        currGridVec.y = currentPos.y;
+
         if (path == null || path.Count == 0)
         {
             FindDestination();
@@ -185,9 +208,17 @@ public class AI : CharacterController
         }
         else
         {
-            Debug.Log((tileBounds.xMin + path.First().x) + " " + (tileBounds.yMin + path.First().y));
+            //  Debug.Log((tileBounds.xMin + path.First().x) + " " + (tileBounds.yMin + path.First().y));
             Vector3 worldPos = walls.CellToWorld(new Vector3Int(tileBounds.xMin + path.First().x, tileBounds.yMin + path.First().y, 0)) + new Vector3(0.32f, 0.32f, 0.0f);
-            movement = new Vector2(worldPos.x - rb.position.x, worldPos.y - rb.position.y + 0.24f).normalized;
+            movement = new Vector2(worldPos.x - rb.position.x, worldPos.y - rb.position.y + 0.56f).normalized;
+
+            // Debug
+            next.transform.position = worldPos;
+            dest.transform.position = walls.CellToWorld(new Vector3Int(tileBounds.xMin + path.Last().x, tileBounds.yMin + path.Last().y, 0)) + new Vector3(0.32f, 0.32f, 0.0f);
+            nextGridVec.x = path.First().x;
+            nextGridVec.y = path.First().y;
+            destGridVec.x = path.Last().x;
+            destGridVec.y = path.Last().y;
         }
     }
 
