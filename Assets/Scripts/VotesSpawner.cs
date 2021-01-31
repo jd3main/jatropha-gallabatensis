@@ -59,7 +59,7 @@ public class VotesSpawner : MonoBehaviour
             float x = Random.Range(bounds.xMin, bounds.xMax) + Random.value;
             float y = Random.Range(bounds.yMin, bounds.yMax) + Random.value;
             Vector3 pos = new Vector3(x, y, 0);
-            print(pos);
+            //print(pos);
             pos *= tileScale;
             SpawnAt(pos);
         }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{0f341b10-e6cb-4dd0-9b7e-a57a5841898c}">
+		<property name="assetPath">
+			<value>Jaw harp twang_002.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.032</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{90dbbec9-c293-4cca-bb3f-e09a8a33ab6f}</destination>
+		</relationship>
+	</object>
+</objects>

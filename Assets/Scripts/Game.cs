@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -10,11 +10,16 @@ public class Game : MonoBehaviour
 
     public float startDeley = 1f;
     public UnityEvent gameStartEvent = new UnityEvent();
+    public UnityEvent gameEndEvent = new UnityEvent();
 
     public float gameTimeLimit = 120;
     private float gameStartTime;
     public float gameTime => Time.time - gameStartTime;
-    public float gameCountDown => gameTimeLimit - gameTime;
+    public float gameCountDown => Mathf.Max(gameTimeLimit - gameTime, 0);
+
+    public int gameResult = 0;
+
+    public string endScene;
 
     void Awake()
     {
@@ -40,5 +45,8 @@ public class Game : MonoBehaviour
         yield return new WaitForSeconds(startDeley);
         gameStartTime = Time.time;
         gameStartEvent.Invoke();
+        yield return new WaitForSeconds(gameTimeLimit);
+        gameEndEvent.Invoke();
+        SceneManager.LoadScene(endScene);
     }
 }

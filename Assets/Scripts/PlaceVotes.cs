@@ -29,7 +29,7 @@ public class PlaceVotes : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && target != null)
         {
             if (target.tag == "PUIPUI")
             {
