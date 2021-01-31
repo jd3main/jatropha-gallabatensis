@@ -9,7 +9,7 @@ public class SecretVoteEmitter : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E) && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             for (int i = 0; i < amounts; i++)
             {
