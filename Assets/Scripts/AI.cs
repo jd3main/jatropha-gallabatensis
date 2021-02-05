@@ -182,7 +182,7 @@ public class AI : CharacterController
         Vector3Int cellPos = walls.WorldToCell(new Vector3(rb.position.x, rb.position.y - 0.56f, tileBounds.zMin));
 
         // Debug
-        Debug.Log("rb.position: " + rb.position.x + " " + (rb.position.y - 0.56f));
+        //Debug.Log("rb.position: " + rb.position.x + " " + (rb.position.y - 0.56f));
 
         if (currentPos == null)
         {
