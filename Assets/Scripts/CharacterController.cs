@@ -69,10 +69,11 @@ public class CharacterController : MonoBehaviour
             && collision.gameObject.GetComponent<Team>().TeamNumber() != gameObject.GetComponent<Team>().TeamNumber())
         {
             votesStolen();
+            AudioManager.instance.Play(Random.Range(0.0f, 1.0f) > 0.5f ? "Punch1" : "Punch1");
         }
         if (collision.gameObject.tag == "Player" && State == PlayerState.dashing)
         {
-            // steal others' votes
+            
         }
     }
 
